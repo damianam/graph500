@@ -1,8 +1,8 @@
-CFLAGS = -Drestrict=__restrict__ -O3 -DGRAPH_GENERATOR_MPI -DREUSE_CSR_FOR_VALIDATION -I../aml -fcommon
+CFLAGS += -Drestrict=__restrict__ -O3 -DGRAPH_GENERATOR_MPI -DREUSE_CSR_FOR_VALIDATION -I../aml -fcommon
 LDFLAGS = -lpthread
 MPICC = mpicc
 
-all: graph500_reference_bfs_sssp graph500_reference_bfs 
+all: graph500_reference_bfs_sssp graph500_reference_bfs
 #graph500_custom_bfs graph500_custom_bfs_sssp
 
 GENERATOR_SOURCES = ../generator/graph_generator.c ../generator/make_graph.c ../generator/splittable_mrg.c ../generator/utils.c
